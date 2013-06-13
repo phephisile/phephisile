@@ -1,0 +1,87 @@
+﻿@model MvcApplication1.Areas.ContactDetails.Models.ContactDetails
+
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Contact Details</legend>
+        <table>
+            <tr>
+                <td>@Html.LabelFor(model => model.FirstName)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.FirstName)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.LastName)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.LastName)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Email)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.Email)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.HomePhone)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.HomePhone.CountryCode)</td>
+                <td>@Html.EditorFor(model => model.HomePhone.AreaCode)</td>
+                <td>@Html.EditorFor(model => model.HomePhone.PhoneNumber)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.CellPhone)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.CellPhone.CountryCode)</td>
+                <td>@Html.EditorFor(model => model.CellPhone.AreaCode)</td>
+                <td>@Html.EditorFor(model => model.CellPhone.PhoneNumber)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.HomeAddress.Line1)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.HomeAddress.Line1)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.HomeAddress.Line2)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.HomeAddress.Line2)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.HomeAddress.Line3)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.HomeAddress.Line3)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.HomeAddress.City)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.HomeAddress.City)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.HomeAddress.Province)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.HomeAddress.Province)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.HomeAddress.PostalCode)</td>
+            </tr>
+            <tr>
+                <td>@Html.EditorFor(model => model.HomeAddress.PostalCode)</td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+<nav>@Html.ActionLink("Back To List", "Index", "Management")</nav>
